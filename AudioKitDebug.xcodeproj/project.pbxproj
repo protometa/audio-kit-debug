@@ -13,6 +13,9 @@
 		E1011B3C1F1060AA0008E121 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1011B3B1F1060AA0008E121 /* Assets.xcassets */; };
 		E1011B3F1F1060AA0008E121 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1011B3D1F1060AA0008E121 /* LaunchScreen.storyboard */; };
 		E1011B4A1F1060AA0008E121 /* AudioKitDebugTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1011B491F1060AA0008E121 /* AudioKitDebugTests.swift */; };
+		E1011B5D1F1063730008E121 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1011B5C1F1063730008E121 /* AudioKit.framework */; };
+		E1011B5E1F1063820008E121 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1011B5C1F1063730008E121 /* AudioKit.framework */; };
+		E1011B5F1F1063820008E121 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1011B5C1F1063730008E121 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +28,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E1011B5B1F10631B0008E121 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E1011B5F1F1063820008E121 /* AudioKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		E1011B311F1060AA0008E121 /* AudioKitDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioKitDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1011B341F1060AA0008E121 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +53,7 @@
 		E1011B451F1060AA0008E121 /* AudioKitDebugTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioKitDebugTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1011B491F1060AA0008E121 /* AudioKitDebugTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioKitDebugTests.swift; sourceTree = "<group>"; };
 		E1011B4B1F1060AA0008E121 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1011B5C1F1063730008E121 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1011B5E1F1063820008E121 /* AudioKit.framework in Frameworks */,
+				E1011B5D1F1063730008E121 /* AudioKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +79,7 @@
 		E1011B281F1060AA0008E121 = {
 			isa = PBXGroup;
 			children = (
+				E1011B5C1F1063730008E121 /* AudioKit.framework */,
 				E1011B331F1060AA0008E121 /* AudioKitDebug */,
 				E1011B481F1060AA0008E121 /* AudioKitDebugTests */,
 				E1011B321F1060AA0008E121 /* Products */,
@@ -106,6 +127,7 @@
 				E1011B2D1F1060AA0008E121 /* Sources */,
 				E1011B2E1F1060AA0008E121 /* Frameworks */,
 				E1011B2F1F1060AA0008E121 /* Resources */,
+				E1011B5B1F10631B0008E121 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -146,6 +168,7 @@
 				TargetAttributes = {
 					E1011B301F1060AA0008E121 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = G86Q8EDDND;
 						ProvisioningStyle = Automatic;
 					};
 					E1011B441F1060AA0008E121 = {
@@ -341,6 +364,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G86Q8EDDND;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = AudioKitDebug/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.protometa.AudioKitDebug;
@@ -353,6 +381,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G86Q8EDDND;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = AudioKitDebug/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.protometa.AudioKitDebug;
